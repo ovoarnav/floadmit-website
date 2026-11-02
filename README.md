@@ -1,5 +1,9 @@
 # FLOadmit website
 
+**Live website:** https://ovoarnav.github.io/floadmit-website/
+
+**Source repository:** https://github.com/ovoarnav/floadmit-website
+
 A standalone static marketing website and browser-local pilot planner, ready for GitHub Pages. There is no build step or package installation.
 
 The site presents FLOadmit’s three core functions:

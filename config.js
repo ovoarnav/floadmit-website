@@ -2,6 +2,6 @@
 window.FLOADMIT_CONFIG = Object.freeze({
   contactEmail: "",
   bookingUrl: "",
-  productionUrl: "",
+  productionUrl: "https://ovoarnav.github.io/floadmit-website/",
   founderName: "Arnav Nambiar"
 });
