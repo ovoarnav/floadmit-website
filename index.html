@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#174b3f">
+  <meta name="description" content="FLOadmit takes in referral documents, assesses medical fit, calculates insurance estimates, and generates 24-hour and 72-hour care plans for clinical review.">
+  <meta property="og:title" content="FLOadmit — From referral to care plan">
+  <meta property="og:description" content="Medical fit assessment. Insurance calculations. 24-hour and 72-hour care plans. One connected referral workflow.">
+  <meta property="og:type" content="website">
+  <title>FLOadmit — From referral to care plan</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-document" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="m8 12 3 3 5-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 13 4-4M8 16l-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M16 8l2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" transform="translate(1 0) scale(.9)"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m3 10v-3a6 6 0 0 0-2-4"/></symbol>
+    <symbol id="i-note" viewBox="0 0 24 24"><path d="M13 4H5v16h14v-9M10 14l1-4 8-8 3 3-8 8z"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#" aria-label="FLOadmit home"><img src="assets/logo.svg" width="34" height="34" alt=""><span>FLO<span class="brand-light">admit</span><span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle icon-button" id="menu-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+        <a href="#workflow">How it works</a><a href="#report">Discharge reports</a><a href="#safeguards">Privacy &amp; safety</a>
+        <button class="button button-small button-dark" data-open-pilot>Plan a pilot <svg class="icon"><use href="#i-up-right"/></svg></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-cream">
+      <div class="hero-layout wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Referral review. Insurance clarity. Care planning.</p>
+          <h1>From referral<br>to a clearer<br><em>care plan.</em></h1>
+          <p class="hero-description">FLOadmit takes in referral documents, assesses medical fit, calculates insurance estimates, and generates 24-hour and 72-hour care plans for your team to review.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#workflow">See how it works <svg class="icon"><use href="#i-arrow"/></svg></a><button class="text-button" data-open-pilot>Plan your pilot <svg class="icon"><use href="#i-up-right"/></svg></button></div>
+          <p class="hero-footnote"><svg class="icon"><use href="#i-check"/></svg> Source information stays visible. Clinical decisions stay with your team.</p>
+        </div>
+        <div class="hero-art" aria-label="Referral documents become a medical fit assessment, insurance calculations, and 24-hour and 72-hour care plans">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="paper-stack paper-back"></div>
+          <div class="paper-stack paper-front"><div class="paper-heading"><span class="doc-icon"><svg class="icon"><use href="#i-document"/></svg></span><div><strong>Referral documents</strong><span>The starting point</span></div><span class="paper-page">01 / 03</span></div><div class="paper-rule"></div><div class="paper-line line-long"></div><div class="paper-line"></div><div class="paper-line line-short"></div><div class="paper-highlight"></div><div class="paper-line"></div><div class="paper-line line-long"></div></div>
+          <div class="hero-preview">
+            <div class="preview-top"><div class="preview-mark"><img src="assets/logo.svg" width="27" height="27" alt=""><span>Referral to care</span></div><span class="preview-dot-group"><i></i><i></i><i></i></span></div>
+            <div class="preview-patient"><span class="avatar avatar-mint"><svg class="icon"><use href="#i-document"/></svg></span><div><h2>One referral. Three outputs.</h2><p>Connected information for your care team</p></div></div>
+            <div class="preview-fact"><span class="tiny-icon green"><svg class="icon"><use href="#i-document"/></svg></span><div><strong>Medical fit assessment</strong><p>Clinical needs against your care criteria</p></div><span class="preview-count">01</span></div>
+            <div class="preview-fact"><span class="tiny-icon sage"><svg class="icon"><use href="#i-shield"/></svg></span><div><strong>Insurance calculations</strong><p>Coverage and reimbursement estimates</p></div><span class="preview-count">02</span></div>
+            <div class="preview-fact"><span class="tiny-icon peach"><svg class="icon"><use href="#i-clock"/></svg></span><div><strong>24-hour &amp; 72-hour care plans</strong><p>Structured drafts for clinical review</p></div><span class="preview-count">03</span></div>
+            <a class="preview-footer" href="#workflow"><span>See the three steps</span><svg class="icon"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="evidence-float"><span class="evidence-float-icon"><svg class="icon"><use href="#i-link"/></svg></span><div><strong>Keep the source close.</strong><span>Review the evidence behind the draft.</span></div></div>
+          <div class="art-caption"><span></span> One connected referral-to-care workflow</div>
+        </div>
+      </div>
+      <div class="hero-bottom wrap"><span>THREE CORE CAPABILITIES</span><div>Medical fit <i></i> Insurance calculations <i></i> 24h &amp; 72h care plans</div><span class="hero-bottom-end">Built around your team.</span></div>
+    </section>
+
+    <section class="workflow-section wrap section-space" id="workflow">
+      <div class="section-heading split-heading"><div><p class="eyebrow">Three things. One connected workflow.</p><h2>Start with the referral.<br><em>See the path to care.</em></h2></div><p>Bring the clinical picture, insurance calculations, and first days of care together—so your team has the information it needs in one place.</p></div>
+      <div class="workflow-steps">
+        <article class="workflow-step"><div class="step-number">01<span></span></div><h3>Assess medical fit.</h3><p>Take in referral documents, extract the relevant clinical information, and assess medical fit against your team’s care criteria. Keep missing information and review questions visible.</p><div class="mini-files"><span><svg class="icon"><use href="#i-document"/></svg> Referral documents</span><span><svg class="icon"><use href="#i-check"/></svg> Medical fit</span></div></article>
+        <article class="workflow-step"><div class="step-number">02<span></span></div><h3>Calculate insurance.</h3><p>Calculate insurance and reimbursement estimates from the supplied payer details and configured rates. Keep the inputs and assumptions available for your team to check.</p><div class="mini-files"><span><svg class="icon"><use href="#i-shield"/></svg> Insurance information</span><span><svg class="icon"><use href="#i-document"/></svg> Calculation breakdown</span></div></article>
+        <article class="workflow-step"><div class="step-number">03<span></span></div><h3>Generate the care plans.</h3><p>Generate structured 24-hour and 72-hour care-plan drafts from the referral information, ready for the clinical team to review, adapt, and approve.</p><div class="mini-files"><span><svg class="icon"><use href="#i-clock"/></svg> 24-hour care plan</span><span><svg class="icon"><use href="#i-clock"/></svg> 72-hour care plan</span></div></article>
+      </div>
+    </section>
+
+    <section class="coverage-section wrap section-space" id="report">
+      <div class="coverage-visual" aria-label="Illustrative discharge-report outline"><div class="coverage-visual-top"><span class="eyebrow">DISCHARGE REPORT DRAFT</span><svg class="icon"><use href="#i-document"/></svg></div><h3>The care needs.<br>The next steps.<br><em>One clear handoff.</em></h3><div class="coverage-row"><span>Documented care information</span><span class="badge badge-green">Source linked</span></div><div class="coverage-row"><span>Follow-up arrangements</span><span class="badge badge-amber">Gaps visible</span></div><div class="coverage-row"><span>Clinical approval</span><span class="badge badge-neutral">Staff review</span></div><p class="visual-footnote">Illustrative report outline · Your hospital defines the final template.</p><div class="coverage-stamp"><svg class="icon"><use href="#i-link"/></svg><span>Sources<br>attached</span></div></div>
+      <div class="coverage-copy"><p class="eyebrow">For hospital discharge teams</p><h2>Less assembling.<br>More time for<br><em>the review.</em></h2><p>Apply the same document-to-report workflow to discharge. Prepare a structured report draft as soon as the agreed documentation is complete, with care needs, follow-up details, and outstanding items together for review.</p><ul class="editorial-list"><li><span>01</span><div><strong>Use the report your team needs.</strong><p>Configure sections for the nursing handoff, documented instructions, follow-up, and outstanding items.</p></div></li><li><span>02</span><div><strong>Keep new information visible.</strong><p>A later note should refresh the affected content and prompt a new review of the changed draft.</p></div></li><li><span>03</span><div><strong>Measure the real time saved.</strong><p>Evaluate preparation time, corrections, and completeness using your hospital’s workflow. Processing times are established in the pilot.</p></div></li></ul><button class="text-button" data-open-pilot>Plan your discharge workflow <svg class="icon"><use href="#i-up-right"/></svg></button></div>
+    </section>
+
+    <section class="safeguards-section section-space" id="safeguards">
+      <div class="wrap"><div class="section-heading split-heading"><div><p class="eyebrow">Privacy &amp; safety</p><h2>Designed for protected<br><em>clinical workflows.</em></h2></div><p>FLOadmit’s clinical deployment plan includes controlled access, protected processing, traceable reports, and a managed data lifecycle. These controls must be configured and verified with the hospital before patient records are introduced.</p></div>
+      <div class="safeguards-grid">
+        <article class="safeguard-card"><span class="safeguard-number">01 / ACCESS</span><svg class="icon"><use href="#i-people"/></svg><h3>The right people.</h3><p>Planned clinical controls include named accounts, permissions by role, and separation between organizations.</p></article>
+        <article class="safeguard-card"><span class="safeguard-number">02 / PROCESSING</span><svg class="icon"><use href="#i-shield"/></svg><h3>Protected information.</h3><p>The deployment design calls for encryption in storage and transit, approved processing services, and limiting information to the workflow’s needs.</p></article>
+        <article class="safeguard-card"><span class="safeguard-number">03 / TRACEABILITY</span><svg class="icon"><use href="#i-link"/></svg><h3>A reviewable record.</h3><p>Source references, staff corrections, approval history, and activity records form part of the intended clinical audit trail.</p></article>
+        <article class="safeguard-card"><span class="safeguard-number">04 / LIFECYCLE</span><svg class="icon"><use href="#i-clock"/></svg><h3>Clear boundaries.</h3><p>Retention, deletion, exports, recovery, and incident-response arrangements must be agreed with the hospital before clinical use.</p></article>
+      </div>
+      <div class="safety-context"><div><h3>HIPAA-informed design. Hospital-specific verification.</h3><p>For US clinical deployments, applicable business associate agreements, risk assessment, technical controls, and operating procedures are part of the implementation. An Ontario deployment is assessed against PHIPA and the hospital’s requirements. This website describes the product and its deployment design; it does not certify clinical compliance.</p></div><div class="safety-demo"><span class="eyebrow">About this website</span><p>Product information and a local pilot planner. Patient-document processing and Epic connectivity belong in the agreed hospital deployment.</p><button class="plain-link" data-open-privacy>Read the website privacy notice <svg class="icon"><use href="#i-up-right"/></svg></button></div></div>
+      <p class="safety-sources">Reference guidance: <a href="https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html" target="_blank" rel="noopener noreferrer">HHS Security Rule</a><span>·</span><a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html" target="_blank" rel="noopener noreferrer">HHS cloud guidance</a><span>·</span><a href="https://www.ontario.ca/laws/statute/04p03" target="_blank" rel="noopener noreferrer">Ontario PHIPA</a></p>
+      </div>
+    </section>
+
+    <section class="implementation-section section-space" id="implementation">
+      <div class="wrap implementation-layout">
+        <div class="implementation-copy"><p class="eyebrow">One team. One focused pilot.</p><h2>Your care workflow.<br><em>A focused first step.</em></h2><p>Start with the referral and the outputs your team needs. Agree on medical-fit criteria, insurance inputs, care-plan templates, and how the reviewed information moves into your hospital’s workflow.</p><button class="button button-light" data-open-pilot>Shape your pilot <svg class="icon"><use href="#i-up-right"/></svg></button></div>
+        <div class="implementation-steps"><article><span>01</span><div><h3>Define your inputs</h3><p>Map the referral documents, care criteria, insurance information, and calculation rules.</p></div></article><article><span>02</span><div><h3>Shape the outputs</h3><p>Set up the medical-fit review, insurance breakdown, and 24-hour and 72-hour care-plan templates.</p></div></article><article><span>03</span><div><h3>Review with your team</h3><p>Evaluate completeness, calculation accuracy, preparation time, and the clinical review process.</p></div></article></div>
+      </div>
+      <div class="wrap integration-note"><div class="integration-symbol"><svg class="icon"><use href="#i-link"/></svg></div><div><p class="eyebrow">Epic integration planning</p><h3>The right notes. The right patient. The right destination.</h3><p>Scope the data source, completion trigger, staff review, and approved output with your hospital’s Epic team. Connectivity and report delivery will be verified in the hospital’s test environment during implementation.</p></div><span class="integration-status">Planned integration<br><small>Configured with your hospital</small></span></div>
+    </section>
+
+    <section class="faq-section wrap section-space" id="questions">
+      <div class="faq-heading"><p class="eyebrow">A few useful answers</p><h2>Clear from<br><em>the beginning.</em></h2><p>From referral assessment<br>to a reviewed plan of care.</p></div>
+      <div class="faq-list">
+        <details open><summary>What are FLOadmit’s three core functions?<span class="faq-plus"></span></summary><p>FLOadmit takes in referral documents and assesses medical fit, calculates insurance estimates, and generates 24-hour and 72-hour care plans. The outputs bring the clinical picture, financial information, and early care needs together for your team’s review.</p></details>
+        <details><summary>How does the medical-fit assessment work?<span class="faq-plus"></span></summary><p>FLOadmit extracts relevant information from the referral and organizes it against your team’s clinical and care-capability criteria. Missing details and questions remain visible so authorized staff can make the admission or placement decision.</p></details>
+        <details><summary>What goes into the insurance calculations?<span class="faq-plus"></span></summary><p>The calculations use supplied insurance information and configured payer rules and rates to produce estimates for review. The hospital or receiving organization agrees on those inputs during setup. Estimates do not establish payer authorization or guarantee payment.</p></details>
+        <details><summary>What are the 24-hour and 72-hour care plans?<span class="faq-plus"></span></summary><p>They are separate care-plan drafts for the first 24 hours and the first 72 hours, generated from the referral information and your team’s templates. Staff review the documented needs, care tasks, follow-up, and open questions before approving the plans.</p></details>
+        <details><summary>Can this also help the hospital discharge team?<span class="faq-plus"></span></summary><p>Yes—the same document-to-report approach can be configured for a discharge or transition-of-care report. The hospital defines the required documentation, completion signal, template, reviewer, and destination for the approved report.</p></details>
+        <details><summary>How quickly can it prepare a discharge report?<span class="faq-plus"></span></summary><p>The goal is to prepare the draft as soon as the required documentation is complete. Actual processing time depends on the records, integration, and hospital workflow and is measured during the pilot. Later source updates should prompt an updated draft and another review.</p></details>
+        <details><summary>How does the design support HIPAA requirements?<span class="faq-plus"></span></summary><p>The clinical deployment plan includes access controls, protected processing, auditability, and controlled retention. HIPAA compliance depends on the actual implementation, applicable agreements, and operating procedures. This website does not establish or certify HIPAA compliance.</p></details>
+        <details><summary>What about an Ontario hospital?<span class="faq-plus"></span></summary><p>An Ontario deployment is reviewed against PHIPA and the hospital’s privacy, security, and information-management requirements. The implementation defines where information is processed, who can access it, how long it is retained, and how approved outputs return to the hospital.</p></details>
+        <details><summary>Can I upload patient records on this website?<span class="faq-plus"></span></summary><p>This is the product website and pilot planner. Clinical document processing and Epic connectivity are set up separately with the hospital. Please use the planner for general workflow information only.</p></details>
+      </div>
+    </section>
+
+    <section class="closing-section wrap"><div class="closing-decoration" aria-hidden="true"><span></span><span></span><span></span></div><p class="eyebrow">A clearer next step for your team</p><h2>Let’s start with<br><em>your care workflow.</em></h2><p>Medical fit. Insurance calculations. Care plans.<br>A practical first step, shaped around your team.</p><button class="button button-dark" data-open-pilot>Plan a pilot <svg class="icon"><use href="#i-up-right"/></svg></button></section>
+  
+
+    </main>
+
+  <footer class="site-footer wrap"><div class="footer-top"><a class="brand" href="#" aria-label="FLOadmit home"><img src="assets/logo.svg" width="30" height="30" alt=""><span>FLO<span class="brand-light">admit</span><span class="brand-dot">.</span></span></a><p>From referral to a clearer care plan.</p><div><a href="#workflow">See how it works</a><button class="plain-link" data-open-privacy>Website privacy</button><a id="footer-email" hidden>Contact</a></div></div><div class="footer-bottom"><span>© <span id="copyright-year">2026</span> FLOadmit</span><span>Created by <span id="founder-name">Arnav Nambiar</span></span><span>Referral information, brought together.</span></div></footer>
+
+  <dialog class="pilot-dialog" id="pilot-dialog" aria-labelledby="pilot-title"><div class="dialog-top"><span class="eyebrow">A practical first step</span><button class="icon-button" data-close-dialog aria-label="Close pilot planner"><svg class="icon"><use href="#i-close"/></svg></button></div><h2 id="pilot-title">Shape your <em>pilot.</em></h2><p class="pilot-intro">Create a short brief to share with your team. Choose the referral, insurance, care-planning, or discharge workflow you want to improve.</p><form id="pilot-form"><div class="form-grid"><label>Hospital or organization<input name="organization" required maxlength="120" autocomplete="organization" placeholder="Your organization"></label><label>Your role<input name="role" required maxlength="100" placeholder="e.g. Discharge coordinator"></label><label>Your name<input name="name" required maxlength="100" autocomplete="name" placeholder="Full name"></label><label>Work email<input name="email" required type="email" maxlength="180" autocomplete="email" placeholder="you@hospital.ca"></label><label class="form-full">Starting workflow<select name="workflow"><option>Referral-to-care planning</option><option>Medical fit assessment</option><option>Insurance calculations</option><option>24-hour and 72-hour care plans</option><option>Discharge report and Epic handoff</option></select></label><label class="form-full">What would you like to make easier?<textarea name="notes" rows="3" maxlength="1500" placeholder="For example: assessing referrals and preparing the first 24-hour and 72-hour care plans."></textarea></label></div><p class="form-note">For general planning only. Please do not include patient information. Details stay in your browser until you download a brief or open your email app.</p><button class="button button-dark form-submit" type="submit">Create pilot brief <svg class="icon"><use href="#i-arrow"/></svg></button></form><div id="pilot-result" hidden><div class="brief-success"><svg class="icon"><use href="#i-check"/></svg><span>Your brief is ready.</span></div><p>Keep a copy for your team and use it to start the implementation conversation.</p><pre id="pilot-preview"></pre><div class="brief-actions"><button id="download-brief" class="button button-dark">Download brief <svg class="icon"><use href="#i-download"/></svg></button><a id="email-brief" class="button button-outline" hidden>Email your brief <svg class="icon"><use href="#i-up-right"/></svg></a><a id="book-call" class="button button-outline" target="_blank" rel="noopener noreferrer" hidden>Book a conversation <svg class="icon"><use href="#i-up-right"/></svg></a></div><p id="email-explanation" class="form-note" hidden>Opens your email app. You review and send the message.</p><button class="text-button brief-back" id="edit-brief">Edit the brief</button></div></dialog>
+
+  <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-top"><span class="eyebrow">About this website</span><button class="icon-button" data-close-dialog aria-label="Close website privacy"><svg class="icon"><use href="#i-close"/></svg></button></div><h2 id="privacy-title">Website privacy</h2><p>This website explains FLOadmit’s referral assessment, insurance calculations, care planning, and hospital discharge use case. It does not accept patient documents or connect to a hospital system.</p><p>Pilot-planner entries are held in your browser’s memory. This website code does not send those entries to a server, use advertising analytics, or store them in cookies or local storage. Refreshing the page clears the entries.</p><p>Downloading a brief creates a file on your device. If you choose an email or booking link, the relevant provider handles the information under its own policies. The hosting and account providers may process ordinary request logs and use authentication cookies.</p><p>A production hospital deployment requires its own agreed data-handling arrangements. This notice describes the product website only.</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-note">The website content is available without JavaScript. Enable JavaScript to create a pilot brief.</div></noscript>
+</body>
+</html>
